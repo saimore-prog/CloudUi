@@ -1,6 +1,7 @@
 package com.example.cloudui
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -95,7 +96,12 @@ fun LoginScreen(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(24.dp))
 
         Button(
-            onClick = { /* Handle Login */ },
+            onClick = {
+                val nums = intArrayOf(2, 7, 11, 15)
+                val target = 9
+                val result = twoSum(nums, target)
+                Log.d("Result Sai", "Two Sum indices: ${result.joinToString()}")
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(50.dp)
